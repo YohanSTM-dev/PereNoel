@@ -1,14 +1,13 @@
 <?php
 
-    include('/db.php');
-    include('/template/index.php');
+    include('php/db.php');
 
     class AppMVC{
 
         private $dbb;
 
         public function _construct(){
-            $this -> dbb = new Database();
+            $this -> dbb = new POO();
         }
 
         public function pageAcceuil(){
