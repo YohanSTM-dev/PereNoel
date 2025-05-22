@@ -1,20 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Le Village du Père Noël</title>
+  
   <link rel="stylesheet" href="/css/styleAcceuil.css">
 </head>
 <body>
   <header>
     <h1>🎅 Bienvenue au village du Père Noël 🎄</h1>
     <nav>
-        <button onclick="location.href='index.php?page=1'">Accueil</button>
-        <button onclick="location.href='index.php?page=2'">Voir les cadeaux</button>
-        <button onclick="location.href='index.php?page=3'">Suivre les livraisons</button>
+      <button onclick="location.href='index.php?page=1'">Accueil</button>
+      <button onclick="location.href='index.php?page=2'">Voir les cadeaux</button>
+      <button onclick="location.href='index.php?page=3'">Suivre les livraisons</button>
     </nav>
   </header>
+
+  <main>
+    <section class="section fond-village">
+      <div class="contenu scroll-fade">
+        <h2>Bienvenue au village enchanté</h2>
+        <p>Les lutins travaillent dur pour préparer les cadeaux...</p>
+      </div>
+    </section>
+  
+    <section class="section fond-atelier">
+      <div class="contenu scroll-fade">
+        <h2>Atelier magique</h2>
+        <p>Les jouets prennent vie grâce à la magie de Noël !</p>
+      </div>
+    </section>
+  
+    <section class="section fond-traineau">
+      <div class="contenu scroll-fade">
+        <h2>Le départ du traîneau</h2>
+        <p>Le Père Noël s'envole à travers le monde...</p>
+      </div>
+    </section>
+  </main>
+  
+  
+<script src="/js/scriptAnimationDefile.js" defer></script>
 
 </body>
 </html>

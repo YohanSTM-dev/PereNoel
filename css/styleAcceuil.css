@@ -1,18 +1,36 @@
-body {
+/* Reset et styles de base */
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  
+body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #013220, #004d40);
     color: white;
     text-align: center;
-    background-image:url('/image/fond-de-guirlandes-de-noel-degrade/6188530.jpg');
-  }
+    background: linear-gradient(to bottom, #013220, #004d40);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 200vh;
+}
   
-  header {
+  /* Header */
+header {
     padding: 2rem;
-  }
+    animation: fadeInUp 1s ease forwards;
+    background-image: url('/image/fond-de-guirlandes-de-noel-degrade/6188530.jpg');
+    
+}
+
+
   
-  button {
+  /* Boutons */
+  nav button {
     margin: 1rem;
     padding: 1rem 2rem;
     background-color: crimson;
@@ -21,9 +39,81 @@ body {
     border-radius: 10px;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.3s ease;
   }
   
-  button:hover {
+  nav button:hover {
     transform: scale(1.1);
   }
+  
+  .section {
+    padding: 100px 20px;
+  }
+  
+  .scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .section-image {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    transition: background 1s ease-in-out;
+  }
+  
+  .contenu {
+    background-color: rgba(0, 0, 0, 0.5); /* assombrit pour lire le texte */
+    padding: 2rem;
+    border-radius: 20px;
+    color: white;
+  }
+  
+  /* Arrière-plans personnalisés */
+  .fond-village {
+    background-image: url('/image/village-noel.jpg');
+  }
+  
+  .fond-atelier {
+    background-image: url('/image/atelier-lutin.jpg');
+  }
+  
+  .fond-traineau {
+    background-image: url('/image/traineau-ciel.jpg');
+  }
+  
+  /* Animation scroll */
+  .scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  

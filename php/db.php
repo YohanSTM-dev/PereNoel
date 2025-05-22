@@ -1,7 +1,7 @@
 <?php  
  
     class POO {
-        private $host = '192.168.0.2';
+        private $host = '172.16.117.5';  //192.168.0.2 
         private $username = 'mathias';
         private $password = 'azerty1234';
         private $dbname = 'noel';

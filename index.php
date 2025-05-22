@@ -1,7 +1,8 @@
 <?php
 
-include("/controleur.php");
-include("php/db.php");
+require_once __DIR__ . '/php/db.php'; 
+require_once __DIR__ . '/controleur.php'; 
+
 
 $bdd = new POO();
 
@@ -23,7 +24,7 @@ switch ($page) {
 
     case 2:
        
-        $monapp->page2();
+        $monapp->pageJouets();
         break;
 
     case 3: 

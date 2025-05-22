@@ -11,7 +11,11 @@ class AppMVC {
     }
 
     public function pageAcceuil() {
-        include __DIR__ . '/template/PageAcceuil.html';
+        include __DIR__ . './template/PageAcceuil.html';
+    }
+
+    public function pageJouets() {
+        include __DIR__ . './php/cadeau.php';
     }
 
 }
