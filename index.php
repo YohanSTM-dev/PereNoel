@@ -1,11 +1,10 @@
 <?php
 
-include("controleur.php");
-include("/php/db.sql");
+include("/controleur.php");
+include("php/db.php");
 
-$bdd = new Database();
+$bdd = new POO();
 
-$bdd -> connexion();
 
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
@@ -28,8 +27,8 @@ switch ($page) {
         break;
 
     case 3: 
-
         $monapp -> page3();
+        break;
 
     default:
        

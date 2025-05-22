@@ -1,20 +1,19 @@
 <?php
 
-    include('php/db.php');
+include_once __DIR__ . '/php/db.php';
 
-    class AppMVC{
+class AppMVC {
 
-        private $dbb;
+    private $dbb;
 
-        public function _construct(){
-            $this -> dbb = new POO();
-        }
-
-        public function pageAcceuil(){
-            include('template/PageAcceuil.html');
-        }
-    
-
+    public function __construct() {
+        $this->dbb = new POO();
     }
+
+    public function pageAcceuil() {
+        include __DIR__ . '/template/PageAcceuil.html';
+    }
+
+}
 
 ?>
