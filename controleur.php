@@ -12,6 +12,7 @@ class AppMVC {
 
     public function pageAcceuil() {
         include __DIR__ . './template/PageAcceuil.html';
+        echo "<p> oaoaoaoa </p>";
     }
 
     public function pageJouets() {

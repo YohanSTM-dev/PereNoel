@@ -7,10 +7,9 @@ require_once __DIR__ . '/controleur.php';
 $bdd = new POO();
 
 
-if (isset($_GET['page'])) {
-    $page = $_GET['page'];
-} else {
-    $page = 1;
+if (!isset($_GET['page'])) {
+    header("Location: index.php?page=1");
+    exit();
 }
 
 $monapp = new AppMVC();
