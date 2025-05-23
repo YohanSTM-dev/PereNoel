@@ -20,12 +20,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt2 = $conn->prepare("INSERT INTO enfants (nom, prenom, age, idadresse) VALUES (?, ?, ?, ?)");
     $stmt2->bind_param("ssii", $nom, $prenom, $age, $idadresse);
     $stmt2->execute();
+    $idenfant = $stmt2->insert_id; 
     $stmt2->close();
 
-
+    $stmt3 = $conn->prepare("INSERT INTO lettres (lettre, id_enfant) VALUES (?, ?)");
+    $stmt3->bind_param("si", $message, $idenfant);
+    $stmt3->execute();
+    $stmt3->close();
 
     echo "🎅 Merci de ta lettre !";
 } else {
     echo "❌ Méthode non autorisée.";
 }
 ?>
+
