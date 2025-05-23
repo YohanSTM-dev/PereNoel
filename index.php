@@ -36,6 +36,10 @@ switch ($page) {
         $monapp -> pageJouets();
         break;
 
+    case 5:
+        $monapp -> pageLettre();
+        break;
+
     default:
        
         $monapp->pageAcceuil();

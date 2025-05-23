@@ -15,6 +15,7 @@
       <button onclick="location.href='index.php?page=3'">Suivre les livraisons</button>
     -->
     </nav>
+    <div id="countdown">Chargement du compte à rebours...</div>
   </header>
 
   <main>
@@ -41,11 +42,46 @@
         <button onclick="location.href='/index.php?page=4'">Suivre les livraisons</button>
       </div>
     </section>
-    
+
+    <section class="section fond-formulaire">
+      <div class="contenu scroll-fade">
+        <h2>Ecrivez une lettre pour le Pere Noel</h2>
+        <p>À l'approche de la nuit de Noël, le Père Noël prépare son traîneau magique, prêt à s'envoler pour livrer des cadeaux aux enfants sages du monde entier. Chaque renne est impatient de prendre son envol, et la magie commence à remplir l'air froid de décembre.</p>
+        <button onclick="location.href='/index.php?page=5'">Suivre les livraisons</button>
+      </div>
+    </section>
   </main>
   
   
 <script src="/js/scriptAnimationDefile.js" defer></script>
+<script>
+  function getNextChristmas() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    let christmas = new Date(currentYear, 11, 24, 0, 0, 0); // 24 décembre
 
+    if (now > christmas) {
+      christmas = new Date(currentYear + 1, 11, 24, 0, 0, 0);
+    }
+    return christmas;
+  }
+
+  function updateCountdown() {
+    const now = new Date();
+    const target = getNextChristmas();
+    const diff = target - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").textContent =
+      `🎁 Noël arrive dans ${days} jours, ${hours}h ${minutes}m ${seconds}s 🎄`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // appel immédiat au chargement
+</script>
 </body>
 </html>

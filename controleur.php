@@ -30,6 +30,10 @@ class AppMVC {
         include __DIR__ . '/template/PageEnfantsJouets.php';
     }
     
+    public function pageLettre(){
+
+        include __DIR__ . "/template/PageFormulaire.php";
+    }
 
 }
 
