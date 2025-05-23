@@ -6,7 +6,7 @@
   });
 </script>
 
-<form method="POST" action="traitement.php">
+<form method="POST" action="/php/PageTraitement.php">
 <link rel="stylesheet" href="/css/styleFormulaire.css">
    <label>Ton nom :</label>
    <input name="nom" id="nom" type="text" />

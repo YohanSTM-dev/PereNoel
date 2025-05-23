@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . "db.php";
+include_once __DIR__ . "/db.php";
 
-$db = new Database();
-$conn = $db->connexion();
+$db = new POO();
+$conn = $db->getConnection(); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = htmlspecialchars(trim($_POST['nom']));
@@ -32,4 +32,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "❌ Méthode non autorisée.";
 }
+
 ?>
