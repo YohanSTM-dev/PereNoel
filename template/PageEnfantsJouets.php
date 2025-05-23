@@ -33,5 +33,6 @@ $liste = $req->getEnfantsAvecJouets();
         </tr>
         <?php endforeach; ?>
     </table>
+
 </body>
 </html>

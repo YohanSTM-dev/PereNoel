@@ -33,7 +33,7 @@ switch ($page) {
         break;
 
     case 3: 
-        $monapp -> page3();
+        $monapp -> pageJouets();
         break;
 
     default:
@@ -47,5 +47,7 @@ switch ($page) {
 // page des ateliers et les jouets fabriqué 
 // listye des livraisons par traineau 
 // lutins et leurs ateliers
+
+
 ?>
 

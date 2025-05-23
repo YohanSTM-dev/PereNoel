@@ -12,7 +12,7 @@ class Requete {
     }
     
 
-    public function getJouets() {
+    public function getJouetsUniquement() {
         $query = "SELECT * FROM jouets";
         $result = $this->connection->query($query);
     
@@ -43,6 +43,34 @@ class Requete {
     
         return $data;
     }
+
+    public function ajouterJouet(string $nom) {
+        $conn = $this->bdd->getConnection();
+        $stmt = $conn->prepare("INSERT INTO jouets (nom) VALUES (?)");
+        if (!$stmt) {
+            return false;
+        }
+        $stmt->bind_param("s", $nom);
+        $success = $stmt->execute();
+        $stmt->close();
+        return $success;
+    }
+
+    public function getJouets() {
+        $conn = $this->bdd->getConnection();
+        $query = "SELECT * FROM jouets ORDER BY nom";
+        $result = $conn->query($query);
+    
+        $jouets = [];
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $jouets[] = $row;
+            }
+        }
+        return $jouets;
+    }
+    
+    
     
 }
 ?>
