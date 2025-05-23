@@ -11,13 +11,21 @@ class AppMVC {
     }
 
     public function pageAcceuil() {
-        include __DIR__ . './template/PageAcceuil.html';
-        echo "<p> oaoaoaoa </p>";
+        include __DIR__ . '/template/PageAcceuil.html';
+        // echo "<h1>Bienvenue sur la page d'accueil (teste) </h1>";    
     }
 
     public function pageJouets() {
-        include __DIR__ . './php/cadeau.php';
+        $jouet = $this -> dbb ->getjouets();
+        include('/template/PageJouets.php');
+        // echo "<h1>teste affisache  </h1>";
     }
+
+    public function pageEnfantsJouets() {
+         // $liste = $this->dbb->getEnfantsAvecJouets();
+        include __DIR__ . '/template/PageEnfantsJouets.php';
+    }
+    
 
 }
 
