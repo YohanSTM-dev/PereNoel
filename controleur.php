@@ -32,7 +32,7 @@ class AppMVC {
     
     public function pageLettre(){
 
-        include __DIR__ . "/template/PageFormulaire.php";
+        include __DIR__ . '/template/PageFormulaire.php';
     }
 
 }
