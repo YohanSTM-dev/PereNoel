@@ -1,0 +1,111 @@
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/image/lettre.png'); /* remplace par le nom réel de ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+
+
+
+form {
+    background: rgba(255, 255, 255, 0.85); /* blanc avec 85% d'opacité */
+    border: 3px solid #a41c1c;
+    border-radius: 16px;
+    padding: 40px 50px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+}
+
+
+form h2 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 2.2em;
+    text-align: center;
+    color: #a41c1c;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px #f7dada;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.05em;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #fafafa;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #a41c1c;
+    background: #fffefc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(164, 28, 28, 0.3);
+}
+
+button {
+    margin-top: 30px;
+    padding: 14px;
+    background: linear-gradient(to right, #2e7d32, #1b5e20);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(to right, #388e3c, #2e7d32);
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 30px 20px;
+    }
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+textarea {
+    min-height: 48px;
+    overflow-y: hidden;
+    resize: none; /* Optionnel : empêche le redimensionnement manuel */
+}
