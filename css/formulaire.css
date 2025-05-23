@@ -2,13 +2,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: repeating-linear-gradient(
-        45deg,
-        #c62828,        /* rouge foncé */
-        #c62828 20px,
-        #2e7d32 20px,   /* vert sapin */
-        #2e7d32 40px
-    );
+    background-image: url('lettre.png'); /* remplace par le nom réel de ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     padding: 60px 20px;
     display: flex;
@@ -19,8 +16,9 @@ body {
 
 
 
+
 form {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.85); /* blanc avec 85% d'opacité */
     border: 3px solid #a41c1c;
     border-radius: 16px;
     padding: 40px 50px;
@@ -30,6 +28,7 @@ form {
     position: relative;
     z-index: 2;
 }
+
 
 form h2 {
     font-family: 'Mountains of Christmas', cursive;
