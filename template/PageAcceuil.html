@@ -1,10 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Le Village du Père Noël</title>
-  <link rel="stylesheet" href="/css/styleAcceuil.css">
+  <link rel="stylesheet" href="styleAcceuil.css">
+  <style>
+    #countdown {
+      font-size: 24px;
+      color: #c62828;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,9 +19,39 @@
     <nav>
         <button onclick="location.href='index.php?page=1'">Accueil</button>
         <button onclick="location.href='index.php?page=2'">Voir les cadeaux</button>
-        <button onclick="location.href='index.php?page=3'">Suivre les livraisons</button>
+        <button onclick="location.href='calendrier.php'">Suivre les livraisons</button>
     </nav>
+    <div id="countdown">Chargement du compte à rebours...</div>
   </header>
 
+  <script>
+    function getNextChristmas() {
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      let christmas = new Date(currentYear, 11, 24, 0, 0, 0); // 24 décembre
+
+      if (now > christmas) {
+        christmas = new Date(currentYear + 1, 11, 24, 0, 0, 0);
+      }
+      return christmas;
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const target = getNextChristmas();
+      const diff = target - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").textContent =
+        `🎁 Noël arrive dans ${days} jours, ${hours}h ${minutes}m ${seconds}s 🎄`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // appel immédiat au chargement
+  </script>
 </body>
 </html>
