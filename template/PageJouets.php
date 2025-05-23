@@ -9,6 +9,7 @@ $jouets = $requete->getJouets();
 <html>
 <head>
     <title>Liste des Jouets</title>
+    <link rel="stylesheet" href="/css/styleCSS.css">
     <style>
         table { border-collapse: collapse; width: 50%; margin: auto; }
         th, td { border: 1px solid #999; padding: 8px; text-align: left; }

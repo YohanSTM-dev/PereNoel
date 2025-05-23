@@ -1,0 +1,91 @@
+/* Style Noël cosy pour la table des jouets */
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #f9f5f1 url('/images/neige-texteure.png') repeat;
+    color: #3b2f2f;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #9b2b27;
+    text-shadow: 1px 1px 0 #e9d7d3;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Table style carte */
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 80%;
+    max-width: 900px;
+    background: #fffdfa;
+    border: 5px dashed #3b6a47; /* vert sapin */
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(59, 106, 71, 0.25);
+    overflow: hidden;
+  }
+  
+  /* En-tête */
+  th {
+    background: #9b2b27;
+    color: #fffdfa;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    box-shadow: inset 0 -3px 5px rgba(0,0,0,0.15);
+    user-select: none;
+  }
+  
+  /* Lignes */
+  td {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    color: #574942;
+    border-top: 1px solid #dcd6d1;
+  }
+  
+  /* Zebra stripes légères */
+  tbody tr:nth-child(odd) {
+    background: #f5f0ea;
+  }
+  
+  /* Hover */
+  tbody tr:hover {
+    background: #d7e8d0;
+    color: #2c3e20;
+    cursor: default;
+    transition: background 0.3s ease;
+  }
+  
+  /* Ombre et bordure autour de la table */
+  table {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  table:hover {
+    box-shadow: 0 0 30px 6px #7eab64;
+  }
+  
+  /* Responsive */
+  @media (max-width: 700px) {
+    table {
+      width: 100%;
+    }
+    th, td {
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+  

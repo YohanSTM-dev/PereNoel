@@ -11,6 +11,8 @@ $liste = $req->getEnfantsAvecJouets();
 <html>
 <head>
     <title>Liste des Jouets demandés</title>
+    <link rel="stylesheet" href="/css/styleJouet.css">
+    
     <style>
         table { border-collapse: collapse; width: 60%; margin: auto; }
         th, td { border: 1px solid #999; padding: 8px; text-align: left; }
