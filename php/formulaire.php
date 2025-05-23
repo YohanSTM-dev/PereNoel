@@ -7,7 +7,7 @@
 </script>
 
 <form method="POST" action="traitement.php">
-<link rel="stylesheet" href="/css/formulaire.css">
+<link rel="stylesheet" href="formulaire.css">
    <label>Ton nom :</label>
    <input name="nom" id="nom" type="text" />
    <label>Ton prenom :</label>
